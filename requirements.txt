@@ -1,0 +1,4 @@
+Kurigram @ git+https://github.com/whicencer/pyrogram.git
+pyaes==1.6.1
+PySocks==1.7.1
+TgCrypto==1.2.5
