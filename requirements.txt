@@ -1,4 +1,4 @@
-Kurigram @ git+https://github.com/whicencer/pyrogram.git@6a862787f0f2c9d022dec5a3bdccbdf33253808d
+Kurigram @ git+https://github.com/whicencer/pyrogram.git@b9b6ad6d9fa3eb9e5add5aadd323af372062b4b2
 pyaes==1.6.1
 PySocks==1.7.1
 python-dotenv==1.1.1
