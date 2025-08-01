@@ -6,7 +6,7 @@
 
 import asyncio
 import config
-from pyrogram import types
+from pyrogram import types, filters
 from pyrogram.client import Client
 from utils import logger
 from src import snipe_gifts
@@ -20,6 +20,11 @@ app = Client(
   api_hash=config.API_HASH,
   test_mode=is_test_env
 )
+
+@app.on_message(filters.private)
+async def status_message(client: Client, message: types.Message):
+  if (message.text == "/status"):
+    await message.reply("**Status**: 🟢 Online")
 
 async def main():
   await app.start()
