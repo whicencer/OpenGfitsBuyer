@@ -31,6 +31,10 @@ async def start(client: Client):
     
     if new_gifts:
       logger.log(log_message=f"🔔 New gifts detected: {len(new_gifts)}")
+      await client.send_message(
+        config.CHANNEL_ID,
+        f"🔔 **New gifts detected:** {len(new_gifts)}\n"
+      )
       file_manager.save_data(current_serialized)
       
       for gift in new_gifts:

@@ -24,10 +24,16 @@ app = Client(
 async def main():
   await app.start()
   logger.log(log_message="✅ User bot started successfully!")
+  star_balance = await app.get_stars_balance()
+  account_me = await app.get_me()
   await app.send_message(
     config.CHANNEL_ID,
-    dedent("""\
+    dedent(f"""\
     ✅ **User bot started!**\n
+    
+    🆔 **Authorized account ID**: `[{account_me.id}]`
+    ⭐ **Account balance**: {star_balance} stars
+    
     Developer: @whicencer
     GitHub: https://github.com/whicencer/OpenGiftsBuyer
     """),
