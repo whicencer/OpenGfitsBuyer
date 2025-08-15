@@ -41,7 +41,6 @@ async def start(client: Client):
         if gift:
           await notifier.notify_changes(client, config.CHANNEL_ID, gift)
           await purchase_collection(client, gift)
-          await asyncio.sleep(2)
     await asyncio.sleep(config.INTERVAL)
 
 
